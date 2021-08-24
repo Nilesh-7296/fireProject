@@ -1,0 +1,28 @@
+<!-- <p>concept works!</p> -->
+<p>Birthday is {{ birthday | date: "MM/dd/yy" }}</p>
+<h1>{{ title }} </h1>
+
+<input [id]="myid" type="text" value="suresh"><br>
+
+<button (click)="updateName()">Update button</button><br> <br>
+
+<button [disabled]="buttonDisabled">diable</button><br> <br>
+
+<input type="text" [(ngModel)]="twobind">
+{{ twobind }}
+
+
+<h3 *ngIf="false;else namee "> 
+    hello world
+</h3>
+
+<ng-template #namee>
+
+<h2>ok</h2>
+</ng-template>
+
+<div *ngFor="let item of color">{{ item }}</div><br> <br>
+<!-- parent to child -->
+<div [ngStyle]="{'color': 'red'}">{{ parentData }}</div>
+
+<button (click)=childParent()>childtoparent</button>
